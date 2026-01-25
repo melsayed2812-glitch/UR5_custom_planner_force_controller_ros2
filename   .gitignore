@@ -1,0 +1,35 @@
+# ROS2 Workspace
+build/
+install/
+log/
+
+# Colcon
+.colcon/
+*.colcon_ignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# ROS2 Bags
+*.bag
+*.bag.*
+
+# Docker
+*.dockerignore
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs/Debug
+*.log

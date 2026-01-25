@@ -1,0 +1,416 @@
+[0.000000] (-) TimerEvent: {}
+[0.000150] (ur_description) JobQueued: {'identifier': 'ur_description', 'dependencies': OrderedDict()}
+[0.000178] (my_ur6_control) JobQueued: {'identifier': 'my_ur6_control', 'dependencies': OrderedDict([('ur_description', '/ros2_ws/install/ur_description')])}
+[0.000189] (ur_simulation_gazebo) JobQueued: {'identifier': 'ur_simulation_gazebo', 'dependencies': OrderedDict([('ur_description', '/ros2_ws/install/ur_description')])}
+[0.000198] (ur_description) JobStarted: {'identifier': 'ur_description'}
+[0.012212] (ur_description) JobProgress: {'identifier': 'ur_description', 'progress': 'cmake'}
+[0.013050] (ur_description) JobProgress: {'identifier': 'ur_description', 'progress': 'build'}
+[0.013364] (ur_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/ur_description', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/ur_description', 'env': OrderedDict([('HOSTNAME', '907e61c10667'), ('GIT_ASKPASS', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-3d3afcfb-1ba0-4d1b-8453-4ff9756d0085.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b73e1299-cdbc-43cf-9547-bef719b7eccd.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/.X11-unix/X29","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':29'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-a220b2c106.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/ros2_ws/install/ur_description:/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X29'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/build/ur_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/ros2_ws/install/ur_description:/opt/ros/humble')]), 'shell': False}
+[0.066692] (ur_description) CommandEnded: {'returncode': 0}
+[0.067412] (ur_description) JobProgress: {'identifier': 'ur_description', 'progress': 'install'}
+[0.073151] (ur_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/ur_description'], 'cwd': '/ros2_ws/build/ur_description', 'env': OrderedDict([('HOSTNAME', '907e61c10667'), ('GIT_ASKPASS', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-3d3afcfb-1ba0-4d1b-8453-4ff9756d0085.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b73e1299-cdbc-43cf-9547-bef719b7eccd.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/.X11-unix/X29","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':29'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-a220b2c106.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/ros2_ws/install/ur_description:/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X29'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/build/ur_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/ros2_ws/install/ur_description:/opt/ros/humble')]), 'shell': False}
+[0.077891] (ur_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.078244] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config\n'}
+[0.078538] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10e\n'}
+[0.078777] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10e/joint_limits.yaml\n'}
+[0.078853] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10e/physical_parameters.yaml\n'}
+[0.078911] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10e/default_kinematics.yaml\n'}
+[0.078966] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10e/visual_parameters.yaml\n'}
+[0.079020] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur15\n'}
+[0.079072] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur15/joint_limits.yaml\n'}
+[0.079124] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur15/physical_parameters.yaml\n'}
+[0.079175] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur15/default_kinematics.yaml\n'}
+[0.079226] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur15/visual_parameters.yaml\n'}
+[0.079278] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur30\n'}
+[0.079329] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur30/joint_limits.yaml\n'}
+[0.079380] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur30/physical_parameters.yaml\n'}
+[0.079431] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur30/default_kinematics.yaml\n'}
+[0.079481] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur30/visual_parameters.yaml\n'}
+[0.079529] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur7e\n'}
+[0.079578] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur7e/joint_limits.yaml\n'}
+[0.079627] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur7e/physical_parameters.yaml\n'}
+[0.079676] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur7e/default_kinematics.yaml\n'}
+[0.079980] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur7e/visual_parameters.yaml\n'}
+[0.080060] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5\n'}
+[0.080112] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5/joint_limits.yaml\n'}
+[0.080164] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5/physical_parameters.yaml\n'}
+[0.080214] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5/default_kinematics.yaml\n'}
+[0.080265] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5/visual_parameters.yaml\n'}
+[0.080314] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3\n'}
+[0.080364] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3/joint_limits.yaml\n'}
+[0.080414] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3/physical_parameters.yaml\n'}
+[0.080464] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3/default_kinematics.yaml\n'}
+[0.080547] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3/visual_parameters.yaml\n'}
+[0.080604] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur8long\n'}
+[0.080655] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur8long/joint_limits.yaml\n'}
+[0.080706] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur8long/physical_parameters.yaml\n'}
+[0.080766] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur8long/default_kinematics.yaml\n'}
+[0.080819] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur8long/visual_parameters.yaml\n'}
+[0.080869] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur20\n'}
+[0.080946] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur20/joint_limits.yaml\n'}
+[0.081003] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur20/physical_parameters.yaml\n'}
+[0.081055] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur20/default_kinematics.yaml\n'}
+[0.081106] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur20/visual_parameters.yaml\n'}
+[0.081171] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/initial_positions.yaml\n'}
+[0.081748] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3e\n'}
+[0.081810] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3e/joint_limits.yaml\n'}
+[0.081864] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3e/physical_parameters.yaml\n'}
+[0.081948] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3e/default_kinematics.yaml\n'}
+[0.082005] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur3e/visual_parameters.yaml\n'}
+[0.082057] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10\n'}
+[0.082112] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10/joint_limits.yaml\n'}
+[0.082163] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10/physical_parameters.yaml\n'}
+[0.082349] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10/default_kinematics.yaml\n'}
+[0.082407] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur10/visual_parameters.yaml\n'}
+[0.082460] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur18\n'}
+[0.082511] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur18/joint_limits.yaml\n'}
+[0.082561] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur18/physical_parameters.yaml\n'}
+[0.082610] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur18/default_kinematics.yaml\n'}
+[0.082660] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur18/visual_parameters.yaml\n'}
+[0.082751] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5e\n'}
+[0.082817] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5e/joint_limits.yaml\n'}
+[0.082869] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5e/physical_parameters.yaml\n'}
+[0.082919] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5e/default_kinematics.yaml\n'}
+[0.082970] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur5e/visual_parameters.yaml\n'}
+[0.083019] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur12e\n'}
+[0.083069] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur12e/joint_limits.yaml\n'}
+[0.083119] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur12e/physical_parameters.yaml\n'}
+[0.083168] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur12e/default_kinematics.yaml\n'}
+[0.083218] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur12e/visual_parameters.yaml\n'}
+[0.083268] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur16e\n'}
+[0.083320] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur16e/joint_limits.yaml\n'}
+[0.083370] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur16e/physical_parameters.yaml\n'}
+[0.083419] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur16e/default_kinematics.yaml\n'}
+[0.083469] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/config/ur16e/visual_parameters.yaml\n'}
+[0.083523] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/launch\n'}
+[0.083574] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/launch/view_ur.launch.py\n'}
+[0.083624] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes\n'}
+[0.083677] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e\n'}
+[0.084002] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/visual\n'}
+[0.084066] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist2.dae\n'}
+[0.084117] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/visual/base.dae\n'}
+[0.084167] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/visual/forearm.dae\n'}
+[0.084216] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist3.dae\n'}
+[0.084265] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/visual/shoulder.dae\n'}
+[0.084315] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist1.dae\n'}
+[0.084366] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/visual/upperarm.dae\n'}
+[0.084478] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/collision\n'}
+[0.084692] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist3.stl\n'}
+[0.085064] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/collision/upperarm.stl\n'}
+[0.085181] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/collision/shoulder.stl\n'}
+[0.086509] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist1.stl\n'}
+[0.087174] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/collision/forearm.stl\n'}
+[0.087314] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist2.stl\n'}
+[0.087374] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10e/collision/base.stl\n'}
+[0.087427] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15\n'}
+[0.087555] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual\n'}
+[0.087609] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual/UR15_DIFF_8bit_2K.jpg\n'}
+[0.087719] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual/wrist2.dae\n'}
+[0.087769] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual/base.dae\n'}
+[0.087796] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual/forearm.dae\n'}
+[0.087878] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual/wrist3.dae\n'}
+[0.088020] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual/shoulder.dae\n'}
+[0.088106] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual/wrist1.dae\n'}
+[0.088134] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/visual/upperarm.dae\n'}
+[0.088163] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/collision\n'}
+[0.088192] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/collision/wrist3.stl\n'}
+[0.088214] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/collision/upperarm.stl\n'}
+[0.088236] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/collision/shoulder.stl\n'}
+[0.088257] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/collision/wrist1.stl\n'}
+[0.088279] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/collision/forearm.stl\n'}
+[0.088299] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/collision/wrist2.stl\n'}
+[0.088320] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/collision/base.stl\n'}
+[0.088343] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur15/LICENSE.txt\n'}
+[0.088363] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30\n'}
+[0.088384] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30/visual\n'}
+[0.088404] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30/visual/forearm.dae\n'}
+[0.088425] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30/visual/UR30_DIFF_8bit_2K.png\n'}
+[0.088476] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30/visual/upperarm.dae\n'}
+[0.088522] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30/collision\n'}
+[0.088597] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30/collision/upperarm.stl\n'}
+[0.088639] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30/collision/forearm.stl\n'}
+[0.088663] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur30/LICENSE.txt\n'}
+[0.088687] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5\n'}
+[0.088709] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/visual\n'}
+[0.088730] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/visual/wrist2.dae\n'}
+[0.088751] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/visual/base.dae\n'}
+[0.088850] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/visual/forearm.dae\n'}
+[0.088893] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/visual/wrist3.dae\n'}
+[0.088947] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/visual/shoulder.dae\n'}
+[0.089004] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/visual/wrist1.dae\n'}
+[0.089073] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/visual/upperarm.dae\n'}
+[0.089128] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/collision\n'}
+[0.089261] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/collision/wrist3.stl\n'}
+[0.089297] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/collision/upperarm.stl\n'}
+[0.089321] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/collision/shoulder.stl\n'}
+[0.089344] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/collision/wrist1.stl\n'}
+[0.089366] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/collision/forearm.stl\n'}
+[0.089387] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/collision/wrist2.stl\n'}
+[0.089408] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5/collision/base.stl\n'}
+[0.089428] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3\n'}
+[0.089447] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/visual\n'}
+[0.089467] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/visual/wrist2.dae\n'}
+[0.089487] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/visual/base.dae\n'}
+[0.089545] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/visual/forearm.dae\n'}
+[0.089606] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/visual/wrist3.dae\n'}
+[0.089657] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/visual/shoulder.dae\n'}
+[0.089752] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/visual/wrist1.dae\n'}
+[0.089876] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/visual/upperarm.dae\n'}
+[0.089955] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/collision\n'}
+[0.090175] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/collision/wrist3.stl\n'}
+[0.090521] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/collision/upperarm.stl\n'}
+[0.090556] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/collision/shoulder.stl\n'}
+[0.090580] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/collision/wrist1.stl\n'}
+[0.090602] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/collision/forearm.stl\n'}
+[0.090663] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/collision/wrist2.stl\n'}
+[0.090817] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3/collision/base.stl\n'}
+[0.090869] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long\n'}
+[0.090914] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long/visual\n'}
+[0.090966] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long/visual/forearm.dae\n'}
+[0.091012] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long/visual/UR8Long_DIFF_8bit_2K.jpg\n'}
+[0.091097] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long/visual/upperarm.dae\n'}
+[0.091149] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long/collision\n'}
+[0.091209] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long/collision/upperarm.stl\n'}
+[0.091238] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long/collision/forearm.stl\n'}
+[0.091261] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur8long/LICENSE.txt\n'}
+[0.091283] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20\n'}
+[0.091304] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual\n'}
+[0.091390] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual/wrist2.dae\n'}
+[0.091466] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual/base.dae\n'}
+[0.091502] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual/forearm.dae\n'}
+[0.091525] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual/UR20_DIFF_8bit_2K.png\n'}
+[0.091597] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual/wrist3.dae\n'}
+[0.091628] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual/shoulder.dae\n'}
+[0.091651] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual/wrist1.dae\n'}
+[0.091672] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/visual/upperarm.dae\n'}
+[0.091693] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/collision\n'}
+[0.091735] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/collision/wrist3.stl\n'}
+[0.091785] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/collision/upperarm.stl\n'}
+[0.091831] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/collision/shoulder.stl\n'}
+[0.091874] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/collision/wrist1.stl\n'}
+[0.091914] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/collision/forearm.stl\n'}
+[0.092014] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/collision/wrist2.stl\n'}
+[0.092058] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/collision/base.stl\n'}
+[0.092102] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur20/LICENSE.txt\n'}
+[0.092233] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e\n'}
+[0.092275] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/visual\n'}
+[0.092304] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist2.dae\n'}
+[0.092326] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/visual/base.dae\n'}
+[0.092348] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/visual/forearm.dae\n'}
+[0.092370] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist3.dae\n'}
+[0.092393] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/visual/shoulder.dae\n'}
+[0.092415] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist1.dae\n'}
+[0.092437] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/visual/upperarm.dae\n'}
+[0.092458] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/collision\n'}
+[0.092517] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist3.stl\n'}
+[0.092562] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/collision/upperarm.stl\n'}
+[0.092606] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/collision/shoulder.stl\n'}
+[0.092647] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist1.stl\n'}
+[0.092706] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/collision/forearm.stl\n'}
+[0.092791] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist2.stl\n'}
+[0.092842] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur3e/collision/base.stl\n'}
+[0.092887] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10\n'}
+[0.093062] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/visual\n'}
+[0.093113] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/visual/wrist2.dae\n'}
+[0.093217] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/visual/base.dae\n'}
+[0.093301] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/visual/forearm.dae\n'}
+[0.093401] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/visual/wrist3.dae\n'}
+[0.093453] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/visual/shoulder.dae\n'}
+[0.093543] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/visual/wrist1.dae\n'}
+[0.093633] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/visual/upperarm.dae\n'}
+[0.093676] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/collision\n'}
+[0.093746] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/collision/wrist3.stl\n'}
+[0.093796] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/collision/upperarm.stl\n'}
+[0.093846] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/collision/shoulder.stl\n'}
+[0.093921] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/collision/wrist1.stl\n'}
+[0.093962] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/collision/forearm.stl\n'}
+[0.094000] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/collision/wrist2.stl\n'}
+[0.094026] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur10/collision/base.stl\n'}
+[0.094049] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18\n'}
+[0.094071] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18/visual\n'}
+[0.094110] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18/visual/UR18_DIFF_8bit_2K.jpg\n'}
+[0.094168] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18/visual/forearm.dae\n'}
+[0.094234] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18/visual/upperarm.dae\n'}
+[0.094279] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18/collision\n'}
+[0.094313] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18/collision/upperarm.stl\n'}
+[0.094335] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18/collision/forearm.stl\n'}
+[0.094357] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur18/LICENSE.txt\n'}
+[0.094378] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e\n'}
+[0.094402] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/visual\n'}
+[0.094422] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist2.dae\n'}
+[0.094443] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/visual/base.dae\n'}
+[0.094463] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/visual/forearm.dae\n'}
+[0.094483] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist3.dae\n'}
+[0.094503] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/visual/shoulder.dae\n'}
+[0.094531] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist1.dae\n'}
+[0.094570] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/visual/upperarm.dae\n'}
+[0.094594] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/collision\n'}
+[0.094614] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist3.stl\n'}
+[0.094642] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/collision/upperarm.stl\n'}
+[0.094662] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/collision/shoulder.stl\n'}
+[0.094683] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist1.stl\n'}
+[0.094703] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/collision/forearm.stl\n'}
+[0.094723] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist2.stl\n'}
+[0.094743] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur5e/collision/base.stl\n'}
+[0.094763] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur16e\n'}
+[0.094783] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur16e/visual\n'}
+[0.094852] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur16e/visual/forearm.dae\n'}
+[0.094907] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur16e/visual/upperarm.dae\n'}
+[0.094952] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur16e/collision\n'}
+[0.095062] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur16e/collision/upperarm.stl\n'}
+[0.095102] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/meshes/ur16e/collision/forearm.stl\n'}
+[0.095125] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/rviz\n'}
+[0.095148] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/rviz/view_robot.rviz\n'}
+[0.095174] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/urdf\n'}
+[0.095246] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/urdf/ur.ros2_control.xacro\n'}
+[0.095272] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/urdf/ur.urdf.xacro\n'}
+[0.095360] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/urdf/inc\n'}
+[0.095444] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/urdf/inc/ur_transmissions.xacro\n'}
+[0.095496] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/urdf/inc/ur_common.xacro\n'}
+[0.095581] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/urdf/ur_macro.xacro\n'}
+[0.095633] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/test\n'}
+[0.095717] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/test/test_view_ur_launch.py\n'}
+[0.095752] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/test/test_ur_urdf_xacro.py\n'}
+[0.095775] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ament_index/resource_index/package_run_dependencies/ur_description\n'}
+[0.095796] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ament_index/resource_index/parent_prefix_path/ur_description\n'}
+[0.095817] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/environment/ament_prefix_path.sh\n'}
+[0.095866] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/environment/ament_prefix_path.dsv\n'}
+[0.095890] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/environment/path.sh\n'}
+[0.095913] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/environment/path.dsv\n'}
+[0.096132] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/local_setup.bash\n'}
+[0.096195] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/local_setup.sh\n'}
+[0.096363] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/local_setup.zsh\n'}
+[0.096464] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/local_setup.dsv\n'}
+[0.096580] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/package.dsv\n'}
+[0.096621] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ament_index/resource_index/packages/ur_description\n'}
+[0.096645] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/cmake/ur_descriptionConfig.cmake\n'}
+[0.096667] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/cmake/ur_descriptionConfig-version.cmake\n'}
+[0.096688] (ur_description) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_description/share/ur_description/package.xml\n'}
+[0.096710] (ur_description) CommandEnded: {'returncode': 0}
+[0.099184] (-) TimerEvent: {}
+[0.124933] (ur_description) JobEnded: {'identifier': 'ur_description', 'rc': 0}
+[0.125697] (my_ur6_control) JobStarted: {'identifier': 'my_ur6_control'}
+[0.128341] (ur_simulation_gazebo) JobStarted: {'identifier': 'ur_simulation_gazebo'}
+[0.131879] (my_ur6_control) JobProgress: {'identifier': 'my_ur6_control', 'progress': 'cmake'}
+[0.132301] (my_ur6_control) JobProgress: {'identifier': 'my_ur6_control', 'progress': 'build'}
+[0.133505] (my_ur6_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/my_ur6_control', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/my_ur6_control', 'env': OrderedDict([('HOSTNAME', '907e61c10667'), ('GIT_ASKPASS', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-3d3afcfb-1ba0-4d1b-8453-4ff9756d0085.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b73e1299-cdbc-43cf-9547-bef719b7eccd.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/.X11-unix/X29","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':29'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-a220b2c106.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/ros2_ws/install/ur_description:/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X29'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/build/my_ur6_control'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/ur_description:/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/opt/ros/humble')]), 'shell': False}
+[0.138962] (ur_simulation_gazebo) JobProgress: {'identifier': 'ur_simulation_gazebo', 'progress': 'cmake'}
+[0.139924] (ur_simulation_gazebo) JobProgress: {'identifier': 'ur_simulation_gazebo', 'progress': 'build'}
+[0.140504] (ur_simulation_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/ur_simulation_gazebo', '--', '-j12', '-l12'], 'cwd': '/ros2_ws/build/ur_simulation_gazebo', 'env': OrderedDict([('HOSTNAME', '907e61c10667'), ('GIT_ASKPASS', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-3d3afcfb-1ba0-4d1b-8453-4ff9756d0085.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b73e1299-cdbc-43cf-9547-bef719b7eccd.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/.X11-unix/X29","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':29'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-a220b2c106.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/ros2_ws/install/ur_description:/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X29'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/build/ur_simulation_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/ur_description:/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/opt/ros/humble')]), 'shell': False}
+[0.167225] (ur_simulation_gazebo) CommandEnded: {'returncode': 0}
+[0.168059] (ur_simulation_gazebo) JobProgress: {'identifier': 'ur_simulation_gazebo', 'progress': 'install'}
+[0.168315] (ur_simulation_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/ur_simulation_gazebo'], 'cwd': '/ros2_ws/build/ur_simulation_gazebo', 'env': OrderedDict([('HOSTNAME', '907e61c10667'), ('GIT_ASKPASS', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/helpers/browser.sh'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.108.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-3d3afcfb-1ba0-4d1b-8453-4ff9756d0085.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b73e1299-cdbc-43cf-9547-bef719b7eccd.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/.X11-unix/X29","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':29'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-a220b2c106.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/ros2_ws/install/ur_description:/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X29'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/build/ur_simulation_gazebo'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/ur_description:/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur6_control:/opt/ros/humble')]), 'shell': False}
+[0.173147] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.173442] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/config\n'}
+[0.173644] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/config/ur_controllers.yaml\n'}
+[0.173685] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/launch\n'}
+[0.173710] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/launch/ur_sim_control.launch.py\n'}
+[0.173809] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/launch/ur_sim_moveit.launch.py\n'}
+[0.173985] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ament_index/resource_index/package_run_dependencies/ur_simulation_gazebo\n'}
+[0.174149] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ament_index/resource_index/parent_prefix_path/ur_simulation_gazebo\n'}
+[0.174435] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/environment/ament_prefix_path.sh\n'}
+[0.174475] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/environment/ament_prefix_path.dsv\n'}
+[0.174503] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/environment/path.sh\n'}
+[0.174525] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/environment/path.dsv\n'}
+[0.174552] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/local_setup.bash\n'}
+[0.174575] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/local_setup.sh\n'}
+[0.174598] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/local_setup.zsh\n'}
+[0.174662] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/local_setup.dsv\n'}
+[0.174722] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.dsv\n'}
+[0.174767] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ament_index/resource_index/packages/ur_simulation_gazebo\n'}
+[0.175009] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/cmake/ur_simulation_gazeboConfig.cmake\n'}
+[0.175070] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/cmake/ur_simulation_gazeboConfig-version.cmake\n'}
+[0.175119] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.xml\n'}
+[0.176235] (ur_simulation_gazebo) CommandEnded: {'returncode': 0}
+[0.184649] (ur_simulation_gazebo) JobEnded: {'identifier': 'ur_simulation_gazebo', 'rc': 0}
+[0.203345] (-) TimerEvent: {}
+[0.233467] (my_ur6_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.303478] (-) TimerEvent: {}
+[0.342378] (my_ur6_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.392901] (my_ur6_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.396535] (my_ur6_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.403639] (-) TimerEvent: {}
+[0.406406] (my_ur6_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.425978] (my_ur6_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.441433] (my_ur6_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.489720] (my_ur6_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.492751] (my_ur6_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.503736] (-) TimerEvent: {}
+[0.602684] (my_ur6_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.603800] (-) TimerEvent: {}
+[0.659410] (my_ur6_control) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.674330] (my_ur6_control) StdoutLine: {'line': b'-- Found trajectory_msgs: 4.9.0 (/opt/ros/humble/share/trajectory_msgs/cmake)\n'}
+[0.691074] (my_ur6_control) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.703904] (-) TimerEvent: {}
+[0.705885] (my_ur6_control) StdoutLine: {'line': b'-- Found moveit_msgs: 2.2.1 (/opt/ros/humble/share/moveit_msgs/cmake)\n'}
+[0.797295] (my_ur6_control) StdoutLine: {'line': b'-- Found moveit_core: 2.5.9 (/opt/ros/humble/share/moveit_core/cmake)\n'}
+[0.804008] (-) TimerEvent: {}
+[0.819447] (my_ur6_control) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[0.844079] (my_ur6_control) StdoutLine: {'line': b'-- Found parameter_traits: 0.6.0 (/opt/ros/humble/share/parameter_traits/cmake)\n'}
+[0.851217] (my_ur6_control) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.17 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[0.871961] (my_ur6_control) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[0.903926] (my_ur6_control) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[0.904061] (-) TimerEvent: {}
+[0.927758] (my_ur6_control) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.004177] (-) TimerEvent: {}
+[1.019231] (my_ur6_control) StdoutLine: {'line': b'-- Found moveit_ros_planning: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning/cmake)\n'}
+[1.023057] (my_ur6_control) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[1.037543] (my_ur6_control) StdoutLine: {'line': b'-- Found controller_interface: 2.53.0 (/opt/ros/humble/share/controller_interface/cmake)\n'}
+[1.104360] (-) TimerEvent: {}
+[1.109768] (my_ur6_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.148045] (my_ur6_control) StdoutLine: {'line': b'-- Generating done\n'}
+[1.154807] (my_ur6_control) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/build/my_ur6_control\n'}
+[1.174966] (my_ur6_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target custom_planner_node\x1b[0m\n'}
+[1.175153] (my_ur6_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_ur6_control_force_controller\x1b[0m\n'}
+[1.204481] (-) TimerEvent: {}
+[1.240926] (my_ur6_control) StdoutLine: {'line': b'[ 50%] Built target my_ur6_control_force_controller\n'}
+[1.242423] (my_ur6_control) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/custom_planner_node.dir/src/custom_planner_node.cpp.o\x1b[0m\n'}
+[1.304572] (-) TimerEvent: {}
+[1.404851] (-) TimerEvent: {}
+[1.505108] (-) TimerEvent: {}
+[1.605509] (-) TimerEvent: {}
+[1.705999] (-) TimerEvent: {}
+[1.806326] (-) TimerEvent: {}
+[1.906684] (-) TimerEvent: {}
+[2.006954] (-) TimerEvent: {}
+[2.107357] (-) TimerEvent: {}
+[2.207667] (-) TimerEvent: {}
+[2.307986] (-) TimerEvent: {}
+[2.408313] (-) TimerEvent: {}
+[2.508617] (-) TimerEvent: {}
+[2.608939] (-) TimerEvent: {}
+[2.709208] (-) TimerEvent: {}
+[2.809505] (-) TimerEvent: {}
+[2.909839] (-) TimerEvent: {}
+[3.010188] (-) TimerEvent: {}
+[3.037462] (my_ur6_control) StderrLine: {'line': b'\x1b[01m\x1b[K/ros2_ws/src/my_ur6_control/src/custom_planner_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid UR5ePathPlannerNode::eeGoalCb(geometry_msgs::msg::PoseStamped_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.037847] (my_ur6_control) StderrLine: {'line': b'\x1b[01m\x1b[K/ros2_ws/src/my_ur6_control/src/custom_planner_node.cpp:99:58:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing _time_from_start_type = struct builtin_interfaces::msg::Duration_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct builtin_interfaces::msg::Duration_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kseconds\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.038076] (my_ur6_control) StderrLine: {'line': b'   99 |     double final_t = traj_.points.back().time_from_start.\x1b[01;31m\x1b[Kseconds\x1b[m\x1b[K();\n'}
+[3.038106] (my_ur6_control) StderrLine: {'line': b'      |                                                          \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.110437] (-) TimerEvent: {}
+[3.211045] (-) TimerEvent: {}
+[3.311348] (-) TimerEvent: {}
+[3.411803] (-) TimerEvent: {}
+[3.512176] (-) TimerEvent: {}
+[3.612549] (-) TimerEvent: {}
+[3.712816] (-) TimerEvent: {}
+[3.813090] (-) TimerEvent: {}
+[3.913365] (-) TimerEvent: {}
+[4.013696] (-) TimerEvent: {}
+[4.114085] (-) TimerEvent: {}
+[4.214524] (-) TimerEvent: {}
+[4.314851] (-) TimerEvent: {}
+[4.415108] (-) TimerEvent: {}
+[4.515379] (-) TimerEvent: {}
+[4.615676] (-) TimerEvent: {}
+[4.715997] (-) TimerEvent: {}
+[4.816336] (-) TimerEvent: {}
+[4.916755] (-) TimerEvent: {}
+[5.017181] (-) TimerEvent: {}
+[5.117529] (-) TimerEvent: {}
+[5.129763] (my_ur6_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/custom_planner_node.dir/build.make:76: CMakeFiles/custom_planner_node.dir/src/custom_planner_node.cpp.o] Error 1\n'}
+[5.130401] (my_ur6_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/custom_planner_node.dir/all] Error 2\n'}
+[5.130472] (my_ur6_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.132910] (my_ur6_control) CommandEnded: {'returncode': 2}
+[5.140426] (my_ur6_control) JobEnded: {'identifier': 'my_ur6_control', 'rc': 2}
+[5.152444] (-) EventReactorShutdown: {}

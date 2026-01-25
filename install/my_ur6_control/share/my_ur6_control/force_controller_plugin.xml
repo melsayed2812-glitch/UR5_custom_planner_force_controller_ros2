@@ -1,0 +1,8 @@
+<library path="my_ur6_control_force_controller">
+  <class
+    name="my_ur6_control/ForceController"
+    type="my_ur6_control::ForceController"
+    base_class_type="controller_interface::ControllerInterface">
+    <description>Force/impedance controller following joint trajectories.</description>
+  </class>
+</library>

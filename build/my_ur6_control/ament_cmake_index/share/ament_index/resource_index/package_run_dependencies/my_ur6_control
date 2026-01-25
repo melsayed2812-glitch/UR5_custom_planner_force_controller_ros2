@@ -1,0 +1,1 @@
+rclcpp;ros2_control;controller_manager;robot_state_publisher;moveit_ros_planning_interface;moveit_msgs;geometry_msgs;shape_msgs;sensor_msgs;moveit_core;moveit_ros_planning;gazebo_ros;gazebo_ros2_control;ros2_controllers;my_ur6_description;xacro;ur_description
