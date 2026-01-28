@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>my_ur5_control</name>
+  <version>0.1.0</version>
+  <description>Custom UR robot with F/T sensor</description>
+
+  <maintainer email="m.elsayed@gmail.com">Mohamed Nassar</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <!-- Build system -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Libraries you compile and link against -->
+  <depend>rclcpp</depend>
+  <depend>ros2_control</depend>
+  <depend>controller_manager</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>shape_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>moveit_core</depend>
+  <depend>moveit_ros_planning</depend>
+  <!-- Runtime-only dependencies -->
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros2_control</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
+  <exec_depend>my_ur6_description</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>ur_description</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <launch>
+      <include file="launch/ur_with_ft_gazebo.launch.py"/>
+    </launch>
+  </export>
+</package>
