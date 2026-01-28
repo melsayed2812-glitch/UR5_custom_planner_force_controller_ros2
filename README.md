@@ -26,8 +26,8 @@ This repository is structured for **academic review and reproducibility**, with 
 
 ## Quick Start (Docker – Recommended)
 ```bash
-git clone https://github.com/melsayed2812-glitch/UR5-ROS2-Force-Control.git
-cd UR5-ROS2-Force-Control/ros2_ws
+git clone https://github.com/melsayed2812-glitch/UR5_custom_planner_force_controller_ros2.git)
+cd UR5_custom_planner_force_controller_ros2
 
 docker build -t ur_force_project .
 docker run -it --rm --privileged -p 6080:6080 \
@@ -41,6 +41,8 @@ docker run -it --rm --privileged -p 6080:6080 \
 Open a **new terminal inside the container**:
 ```bash
 source install/setup.bash
+apt update && apt install -y ros-humble-gazebo-ros2-control ros-humble-gazebo-ros-pkgs
+
 ros2 launch my_ur6_control fake_my_ur6.launch.py ur_type:=ur5
 ```
 Supported robot models:
