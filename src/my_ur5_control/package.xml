@@ -2,12 +2,10 @@
 <package format="3">
   <name>my_ur5_control</name>
   <version>0.1.0</version>
-  <description>Custom UR robot with F/T sensor</description>
+  <description>Custom UR robot with fake F/T sensor</description>
 
   <maintainer email="m.elsayed2812@gmail.com">Mohamed Nassar</maintainer>
   <license>BSD-3-Clause</license>
-
-  <build_type>ament_cmake</build_type>  <!-- Moved to top level; remove duplicates -->
 
   <!-- Build system -->
   <buildtool_depend>ament_cmake</buildtool_depend>
@@ -29,7 +27,7 @@
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>gazebo_ros2_control</exec_depend>
   <exec_depend>ros2_controllers</exec_depend>
-  <exec_depend>ur_description</exec_depend>  <!-- Changed from my_ur6_description to ur_description (or your UR5 package) -->
+  <exec_depend>ur_description</exec_depend>
   <exec_depend>xacro</exec_depend>
 
   <export>
