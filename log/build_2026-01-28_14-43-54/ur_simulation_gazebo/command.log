@@ -1,0 +1,1 @@
+Invoking command in '/ros2_ws/build/ur_simulation_gazebo': CMAKE_PREFIX_PATH=/ros2_ws/install/ur_description:/ros2_ws/install/ur_simulation_gazebo:/ros2_ws/install/my_ur5_control:/opt/ros/humble /usr/bin/cmake /ros2_ws/UR6_custom_planner_force_controller_ros2/src/my_ur5_gazebo_sim/ur_simulation_gazebo -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/ur_simulation_gazebo

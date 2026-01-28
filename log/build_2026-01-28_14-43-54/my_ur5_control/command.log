@@ -1,0 +1,2 @@
+Invoking command in '/ros2_ws/build/my_ur5_control': /usr/bin/cmake /ros2_ws/UR6_custom_planner_force_controller_ros2/src/my_ur5_control -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/my_ur5_control
+Invoked command in '/ros2_ws/build/my_ur5_control' returned '1': /usr/bin/cmake /ros2_ws/UR6_custom_planner_force_controller_ros2/src/my_ur5_control -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/my_ur5_control

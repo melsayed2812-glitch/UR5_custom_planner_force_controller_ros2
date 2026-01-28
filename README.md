@@ -1,1 +1,0 @@
-# UR6_custom_planner_force_controller_ros2
