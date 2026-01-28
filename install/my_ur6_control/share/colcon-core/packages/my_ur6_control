@@ -1,1 +1,0 @@
-controller_manager:gazebo_ros:gazebo_ros2_control:geometry_msgs:moveit_core:moveit_msgs:moveit_ros_planning:moveit_ros_planning_interface:my_ur6_description:rclcpp:robot_state_publisher:ros2_control:ros2_controllers:sensor_msgs:shape_msgs:ur_description:xacro

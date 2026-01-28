@@ -1,0 +1,5 @@
+<library path="my_ur5_control">
+  <class type="my_ur5_control::ForceController" base_class_type="controller_interface::ControllerInterface">
+    <description>A force controller for UR5.</description>
+  </class>
+</library>
