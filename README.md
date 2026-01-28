@@ -8,7 +8,7 @@ This repository is structured for **academic review and reproducibility**, with 
 ---
 
 ## System Overview
-- **Robot**: UR6 (UR5-compatible kinematics for simulation)
+- **Robot**: UR5 (UR5-compatible kinematics for simulation)
 - **Planner**: Cartesian end-effector trajectory generator
 - **Controller**: PD force controller with external disturbance injection
 - **Simulation**: Gazebo + fake force interface
@@ -26,8 +26,8 @@ This repository is structured for **academic review and reproducibility**, with 
 
 ## Quick Start (Docker – Recommended)
 ```bash
-git clone https://github.com/melsayed2812-glitch/UR6-ROS2-Force-Control.git
-cd UR6-ROS2-Force-Control/ros2_ws
+git clone https://github.com/melsayed2812-glitch/UR5-ROS2-Force-Control.git
+cd UR5-ROS2-Force-Control/ros2_ws
 
 docker build -t ur_force_project .
 docker run -it --rm --privileged -p 6080:6080 \
