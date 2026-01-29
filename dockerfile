@@ -1,10 +1,9 @@
-# Multi-stage-like from osrf/ros:humble-desktop base 
+# Base ROS2 Humble desktop image
 FROM osrf/ros:humble-desktop
 
-# Core ROS2 setup (your layers 15-20)
 SHELL ["/bin/bash", "-c"]
 
-# UR-specific packages + Gazebo/MoveIt (your key layer)
+# Install required ROS2 packages
 RUN apt update && \
     apt install -y \
       ros-humble-gazebo-ros-pkgs \
@@ -16,13 +15,22 @@ RUN apt update && \
       ros-humble-xacro \
     && rm -rf /var/lib/apt/lists/*
 
-# Workspace setup (your final layers)
+# Set ROS2 workspace
 WORKDIR /ros2_ws
-RUN mkdir -p src
 
-# Source ROS on login (your top layer)
+# Copy your local repository into the container's workspace
+COPY ./src /ros2_ws/src
+
+# Source ROS2 and build all packages in src
+RUN . /opt/ros/humble/setup.bash && \
+    colcon build --symlink-install
+
+# Automatically source ROS2 and workspace on container start
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+RUN echo "source /ros2_ws/install/setup.bash" >> ~/.bashrc
 
-# Standard ROS entrypoint (inherited)
+# Standard ROS entrypoint
 ENTRYPOINT ["/ros_entrypoint.sh"]
 CMD ["bash"]
+
+
