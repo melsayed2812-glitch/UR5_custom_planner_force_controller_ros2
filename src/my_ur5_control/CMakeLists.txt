@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 project(my_ur5_control)
 cmake_policy(SET CMP0009 NEW)
+
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
@@ -15,7 +16,8 @@ find_package(tf2_geometry_msgs REQUIRED)
 find_package(controller_interface REQUIRED)
 find_package(hardware_interface REQUIRED)
 find_package(pluginlib REQUIRED)
-find_package(angles REQUIRED)  
+find_package(angles REQUIRED)
+
 # Common dependency list for nodes
 set(dependencies
   rclcpp
@@ -29,17 +31,15 @@ set(dependencies
 )
 
 # ---- Force controller ros2_control plugin ----
-add_library(force_controller SHARED   
-  src/force_controller.cpp
-)
+add_library(my_ur5_control SHARED src/force_controller.cpp)
 
-target_include_directories(force_controller
+target_include_directories(my_ur5_control
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
 
-ament_target_dependencies(force_controller
+ament_target_dependencies(my_ur5_control
   rclcpp
   controller_interface
   hardware_interface
@@ -66,16 +66,15 @@ target_include_directories(custom_planner_node
     $<INSTALL_INTERFACE:include>
 )
 
-
 # ---- Install ----
-install(TARGETS
-  custom_planner_node
-  force_controller
-  DESTINATION lib/${PROJECT_NAME}
-)
+# Install the library to lib (standard for plugins to avoid subdirectory issues)
+install(TARGETS my_ur5_control DESTINATION lib)
+
+# Install the executable to lib/${PROJECT_NAME} (standard for executables)
+install(TARGETS custom_planner_node DESTINATION lib/${PROJECT_NAME})
 
 install(
-  DIRECTORY launch  config
+  DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME}
 )
 
