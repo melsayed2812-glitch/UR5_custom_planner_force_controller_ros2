@@ -44,7 +44,6 @@ source install/setup.bash
 apt update && apt install -y ros-humble-gazebo-ros2-control ros-humble-gazebo-ros-pkgs
 
 ros2 launch my_ur5_control fake_my_ur5.launch.py ur_type:=ur5
-```
 Supported robot models:
 - `ur5` (default)
 - `ur6` (if enabled in URDF/xacro)
@@ -53,7 +52,7 @@ Supported robot models:
 
 ## Essential Monitoring (End-Effector Verification)
 These commands are **recommended for academic review** to verify tracking accuracy.
-```bash
+
 # Joint states (low-level verification)
 ros2 topic echo /joint_states
 
@@ -70,7 +69,7 @@ ros2 topic echo /my_force_controller/trajectory
 ros2 topic echo /fake_force
 ```
 Visualization:
-```bash
+
 rviz2
 ```
 Recommended RViz displays:
