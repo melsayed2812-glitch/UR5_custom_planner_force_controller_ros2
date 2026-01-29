@@ -41,7 +41,18 @@ docker run -it --rm --privileged -p 6080:6080 \
 Open a **new terminal inside the container**:
 colcon build (if needed)
 source install/setup.bash
-apt update && apt install -y ros-humble-gazebo-ros2-control ros-humble-gazebo-ros-pkgs
+apt update && apt install -y \
+  ros-humble-gazebo-ros2-control \
+  ros-humble-gazebo-ros-pkgs \
+  ros-humble-std-msgs \
+  ros-humble-geometry-msgs \
+  ros-humble-sensor-msgs \
+  ros-humble-trajectory-msgs \
+  ros-humble-rviz2 \
+  python3-colcon-common-extensions \
+  ros-humble-ros2doctor
+
+
 
 ros2 launch my_ur5_control fake_my_ur5.launch.py ur_type:=ur5
 Supported robot models:
@@ -102,6 +113,7 @@ Repeat for:
 **Start motion**
 ```bash
 ros2 topic pub /ee_goal geometry_msgs/PoseStamped "{
+  header: {frame_id: 'base_link'},
   pose: {position: {x: 0.3, y: 0.0, z: 0.5}, orientation: {w: 1.0}}
 }" --once
 ```
