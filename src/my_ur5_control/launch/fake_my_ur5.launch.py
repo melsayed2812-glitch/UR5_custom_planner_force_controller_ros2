@@ -83,6 +83,12 @@ def launch_setup(context, *args, **kwargs):
     )
     robot_description = {"robot_description": robot_description_content}
 
+    controller_manager_node = Node(
+    package="controller_manager",
+    executable="ros2_control_node",
+    parameters=[robot_description, controllers_file],  # controllers_config should point to your YAML
+    output="screen",
+    )
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -136,10 +142,10 @@ def launch_setup(context, *args, **kwargs):
     )
 
    # Force controller spawner (ACTIVE)
-my_force_controller_spawner = Node(
+    my_force_controller_spawner = Node(
     package="controller_manager",
     executable="spawner",
-    arguments=["my_force_controller", "--load-library", "my_ur5_control", "-c", "/controller_manager"],
+    arguments=["my_force_controller", "-c", "/controller_manager"],
     output="screen",
 )
 
@@ -163,6 +169,7 @@ my_force_controller_spawner = Node(
     )
 
     nodes_to_start = [
+        controller_manager_node, 
         robot_state_publisher_node,
         joint_state_broadcaster_spawner,
         delay_rviz_after_joint_state_broadcaster_spawner,
