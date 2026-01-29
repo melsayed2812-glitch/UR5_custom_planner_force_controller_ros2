@@ -1,7 +1,7 @@
-# UR6 ROS2 Force-Control Project
+# UR5 ROS2 Force-Control Project
 
 **Master Project 2**  
-UR6 simulation with a custom Cartesian path planner and PD-based force controller using **ROS 2 Humble** and **Gazebo**.
+UR5 simulation with a custom Cartesian path planner and PD-based force controller using **ROS 2 Humble** and **Gazebo**.
 
 This repository is structured for **academic review and reproducibility**, with validation scenarios corresponding to **Chapters 6–7** of the report.
 
@@ -10,7 +10,7 @@ This repository is structured for **academic review and reproducibility**, with 
 ## System Overview
 - **Robot**: UR5 (UR5-compatible kinematics for simulation)
 - **Planner**: Cartesian end-effector trajectory generator
-- **Controller**: PD force controller with external disturbance injection
+- **Controller**:Controller: Joint-space PD controller with external force disturbance injection
 - **Simulation**: Gazebo + fake force interface
 - **Visualization**: RViz2
 
@@ -39,10 +39,10 @@ docker run -it --rm --privileged -p 6080:6080 \
 
 ## Launch Simulation
 Open a **new terminal inside the container**:
-```bash
+colcon build (if needed)
 source install/setup.bash
 apt update && apt install -y ros-humble-gazebo-ros2-control ros-humble-gazebo-ros-pkgs
-colcon build (if needed)
+
 ros2 launch my_ur5_control fake_my_ur5.launch.py ur_type:=ur5
 ```
 Supported robot models:
@@ -60,7 +60,7 @@ ros2 topic echo /joint_states
 # End-effector reference (goal)
 ros2 topic echo /ee_goal
 
-# End-effector actual pose (FK output)
+# # End-effector actual pose (forward kinematics)
 ros2 topic echo /ee_pose
 
 # Planner trajectory output
