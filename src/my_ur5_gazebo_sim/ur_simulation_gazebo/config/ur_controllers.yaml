@@ -47,6 +47,8 @@ my_force_controller:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
+    command_interfaces: [effort]  # Matches HW_IF_EFFORT
+    state_interfaces: [position, velocity]  # Matches HW_IF_POSITION/VELOCITY
     kp: [80.0, 80.0, 60.0, 40.0, 20.0, 10.0]
     kd: [4.0, 4.0, 3.0, 2.0, 1.0, 0.5]
     fake_force_gain: 1.0
