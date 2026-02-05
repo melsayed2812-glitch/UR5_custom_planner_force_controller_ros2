@@ -121,11 +121,11 @@ ros2 topic pub /ee_goal geometry_msgs/PoseStamped "{
 ```
 **Apply disturbance (~2 s mid-trajectory)**
 ```bash
-ros2 topic pub /fake_force std_msgs/Float64MultiArray "{data: [7.0, 0.0, 0.0]}" --once
+ros2 topic pub my_force_controller/fake_force std_msgs/Float64MultiArray "{data: [7.0, 0.0, 0.0, 0.0, 0.0, 0.0]}" --once
 ```
 **Remove disturbance**
 ```bash
-ros2 topic pub /fake_force std_msgs/Float64MultiArray "{data: [0.0, 0.0, 0.0]}" --once
+ros2 topic pub my_force_controller/fake_force std_msgs/Float64MultiArray "{data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}" --once
 ```
 Expected:
 - Peak deviation: **5–15 mm**
@@ -135,8 +135,7 @@ Expected:
 
 ### Scenario 3: Persistent External Force
 ```bash
-ros2 topic pub /fake_force std_msgs/Float64MultiArray "{data: [5.0, 0.0, 0.0]}" --once
-```
+ros2 topic pub my_force_controller/fake_force std_msgs/Float64MultiArray "{data: [5.0, 0.0, 0.0, 0.0, 0.0, 0.0]}" --once```
 ```bash
 ros2 topic pub /ee_goal geometry_msgs/PoseStamped "{
   pose: {position: {x: 0.5, y: 0.0, z: 0.5}, orientation: {w: 1.0}}
