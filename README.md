@@ -26,6 +26,17 @@ This repository is structured for **academic review and reproducibility**, with 
 
 ## Quick Start (Docker – Recommended)
 ```bash
+
+sudo apt update
+sudo apt install -y docker.io docker-compose
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker --version
+docker-compose --version
+dpkg -l | grep docker
+
 git clone https://github.com/melsayed2812-glitch/UR5_custom_planner_force_controller_ros2.git
 cd UR5_custom_planner_force_controller_ros2
 
