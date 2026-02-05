@@ -57,16 +57,17 @@ Open a **new terminal inside the container**:
 colcon build (if needed)
 
 source install/setup.bash
+
 apt update && apt install -y \
-  ros-humble-gazebo-ros2-control \
-  ros-humble-gazebo-ros-pkgs \
-  ros-humble-std-msgs \
-  ros-humble-geometry-msgs \
-  ros-humble-sensor-msgs \
-  ros-humble-trajectory-msgs \
-  ros-humble-rviz2 \
-  python3-colcon-common-extensions \
-  ros-humble-ros2doctor
+ros-humble-gazebo-ros2-control \
+ros-humble-gazebo-ros-pkgs \
+ros-humble-std-msgs \
+ros-humble-geometry-msgs \
+ros-humble-sensor-msgs \
+ros-humble-trajectory-msgs \
+ros-humble-rviz2 \
+python3-colcon-common-extensions \
+ros-humble-ros2doctor
 
 
 
