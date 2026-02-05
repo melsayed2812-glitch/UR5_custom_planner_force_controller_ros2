@@ -41,6 +41,9 @@ git clone https://github.com/melsayed2812-glitch/UR5_custom_planner_force_contro
 cd UR5_custom_planner_force_controller_ros2
 
 docker build -t ur_force_project .
+
+xhost +local:docker
+
 docker run -it --rm --privileged -p 6080:6080 \
   -e DISPLAY=$DISPLAY ur_force_project
 ```
