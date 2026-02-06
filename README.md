@@ -24,7 +24,7 @@ This repository is structured for **academic review and reproducibility**, with 
 
 ---
 
-## Quick Start (Docker – Recommended)
+## Quick Start (Docker install – Recommended)
 ```bash
 
 sudo apt update
