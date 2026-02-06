@@ -54,7 +54,7 @@ docker run -it --rm --privileged -p 6080:6080 \
 ## Launch Simulation
 Open a **new terminal inside the container**:
 
-colcon build (if needed)
+
 
 source install/setup.bash
 
