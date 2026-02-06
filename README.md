@@ -44,8 +44,11 @@ docker build -t ur_force_project .
 
 xhost +local:docker
 
-docker run -it --rm --privileged -p 6080:6080 \
-  -e DISPLAY=$DISPLAY ur_force_project
+docker run -it --rm --privileged \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  ur_force_project
+
 ```
 > Docker ensures deterministic results during academic evaluation.
 
@@ -58,9 +61,22 @@ Open a **new terminal inside the container**:
 
 source install/setup.bash
 
-apt update && apt install -y ros-humble-gazebo-ros2-control ros-humble-gazebo-ros-pkgs ros-humble-std-msgs ros-humble-geometry-msgs ros-humble-sensor-msgs ros-humble-trajectory-msgs ros-humble-rviz2 python3-colcon-common-extensions ros-humble-ros2doctor
-
-apt-get install -y x11-apps
+apt update
+apt install -y \
+  ros-humble-gazebo-ros2-control \
+  ros-humble-gazebo-ros-pkgs \
+  ros-humble-std-msgs \
+  ros-humble-geometry-msgs \
+  ros-humble-sensor-msgs \
+  ros-humble-trajectory-msgs \
+  ros-humble-rviz2 \
+  ros-humble-ros2doctor \
+  python3-colcon-common-extensions \
+  x11-apps
+  
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install
+source install/setup.bash
 
 ros2 launch my_ur5_control fake_my_ur5.launch.py ur_type:=ur5
 
