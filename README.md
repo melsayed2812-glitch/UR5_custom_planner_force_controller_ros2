@@ -59,9 +59,10 @@ Open a **new terminal inside the container**:
 
 
 
-source install/setup.bash
+source /opt/ros/humble/setup.bash
 
 apt update
+
 apt install -y \
   ros-humble-gazebo-ros2-control \
   ros-humble-gazebo-ros-pkgs \
@@ -73,6 +74,7 @@ apt install -y \
   ros-humble-ros2doctor \
   python3-colcon-common-extensions \
   x11-apps
+
   
 source /opt/ros/humble/setup.bash
 colcon build --symlink-install
