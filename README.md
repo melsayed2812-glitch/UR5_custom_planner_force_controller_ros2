@@ -75,7 +75,6 @@ apt install -y ros-humble-gazebo-ros2-control \
                ros-humble-ros2doctor \
                python3-colcon-common-extensions \
                x11-apps \
-               ros-humble-kdl-parser  # Add this for KDL testing
 
 # Source ROS2
 source /opt/ros/humble/setup.bash
