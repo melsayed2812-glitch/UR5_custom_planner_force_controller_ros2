@@ -61,26 +61,26 @@ Open a **new terminal inside the container**:
 
 source /opt/ros/humble/setup.bash
 
-apt update
+# Update & upgrade first (34 packages pending)
+apt update && apt upgrade -y
 
-apt install -y \
-  ros-humble-gazebo-ros2-control \
-  ros-humble-gazebo-ros-pkgs \
-  ros-humble-std-msgs \
-  ros-humble-geometry-msgs \
-  ros-humble-sensor-msgs \
-  ros-humble-trajectory-msgs \
-  ros-humble-rviz2 \
-  ros-humble-ros2doctor \
-  python3-colcon-common-extensions \
-  x11-apps
+# Install with proper syntax (one command, space-separated)
+apt install -y ros-humble-gazebo-ros2-control \
+               ros-humble-gazebo-ros-pkgs \
+               ros-humble-std-msgs \
+               ros-humble-geometry-msgs \
+               ros-humble-sensor-msgs \
+               ros-humble-trajectory-msgs \
+               ros-humble-rviz2 \
+               ros-humble-ros2doctor \
+               python3-colcon-common-extensions \
+               x11-apps \
+               ros-humble-kdl-parser  # Add this for KDL testing
 
-  
+# Source ROS2
 source /opt/ros/humble/setup.bash
 
-
 colcon build --symlink-install
-
 
 source install/setup.bash
 
